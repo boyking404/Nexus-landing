@@ -15,11 +15,11 @@ const Footer = () => {
       <div className="app__footer-content">
         <div className="app__footer-content-1">
           <div className="logo">
-            <img className="h-full w-full object-cover" src={logo}></img>
+            <img className="object-cover w-full h-full" src={logo}></img>
           </div>
-          <p className="p__font1 mb-5">
+          <p className="mb-5 p__font1">
             Your Not-A-Regular E-Commerce Site. An Unique Solution to Transform
-            the world of Logistics. Pushing culture and India Post to new
+            the world of Logistics. Pushing culture to new
             heights. Connecting bridges between Diaspora and Local Artisans in a
             Decentralised, Secure and Seamless way.
           </p>
