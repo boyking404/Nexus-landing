@@ -15,15 +15,15 @@ const Navbar = () => {
     },
     {
       displaytext: "Marketplace",
-      link: "https://coming-soon-devxaves.vercel.app",
+      link: "https://bharatiya-marketplace.vercel.app/",
     },
     {
       displaytext: "Community",
-      link: "https://bharatse-community.vercel.app", // Internal link
+      link: "https://bharatiya-community.vercel.app", // Internal link
     },
     {
       displaytext: "Logistics",
-      link: "https://inventory-bharatse.vercel.app",
+      link: "https://bharatiya-inventory.vercel.app",
     },
   ];
 
@@ -33,13 +33,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="app__navbar w-screen fixed top-0 shadow-2xl">
+      <nav className="fixed top-0 w-screen shadow-2xl app__navbar">
         <div className="app__navbar-logo">
-          <img className="h-full w-full object-cover" src={logo} alt="Logo" />
+          <img className="object-cover w-full h-full" src={logo} alt="Logo" />
         </div>
         <div className="app__navbar-logo_small">
           <img
-            className="h-full w-full object-cover"
+            className="object-cover w-full h-full"
             src={smalllogo}
             alt="Small Logo"
           />
@@ -63,11 +63,11 @@ const Navbar = () => {
         )}
 
         {isAuthenticated && (
-          <div className="app__navbar-search bg-transparent">
+          <div className="bg-transparent app__navbar-search">
             <div className="search">
               <input
                 type="text"
-                className="bg-transparent text-white"
+                className="text-white bg-transparent"
                 placeholder="Search"
               />
               <AiOutlineSearch className="search__icon" />
@@ -76,7 +76,7 @@ const Navbar = () => {
         )}
 
         {isAuthenticated ? (
-          <div className="app__navbar-button flex flex-row">
+          <div className="flex flex-row app__navbar-button">
             <button
               className="login"
               onClick={() =>
@@ -85,7 +85,7 @@ const Navbar = () => {
             >
               Log Out
             </button>
-            <div className="button_2 flex flex-row items-center justify-evenly w-max profile-btn">
+            <div className="flex flex-row items-center button_2 justify-evenly w-max profile-btn">
               <h2 className="mx-3">{user.name.split(" ")[0]}</h2>
               <img
                 className="w-12 rounded-full aspect-square"
@@ -114,7 +114,7 @@ const Navbar = () => {
           </div>
         )}
 
-        <div className="app__navbar-smallscreen items-center rounded-full">
+        <div className="items-center rounded-full app__navbar-smallscreen">
           {toggleMenu ? (
             <MdClose
               color="#eaeaea"
@@ -142,8 +142,8 @@ const Navbar = () => {
           disabled={toggleMenu ? false : true}
         >
           {isAuthenticated && (
-            <div className="w-full flex flex-col items-center">
-              <div className="profile-details flex flex-col items-center py-5 w-full border-b-gray-700 border-b">
+            <div className="flex flex-col items-center w-full">
+              <div className="flex flex-col items-center w-full py-5 border-b profile-details border-b-gray-700">
                 <img
                   className="w-24 rounded-full aspect-square"
                   src={user.picture}
@@ -151,7 +151,7 @@ const Navbar = () => {
                 />
                 <h2 className="mx-3 mt-2">{user.name}</h2>
               </div>
-              <ul className="app__navbar-smallscreen-links items-center py-3 mb-5 border-b-gray-700 border-b">
+              <ul className="items-center py-3 mb-5 border-b app__navbar-smallscreen-links border-b-gray-700">
                 {navlinkUrls.map((i, index) => (
                   <li key={index} className="my-2 text-center">
                     <a
@@ -167,7 +167,7 @@ const Navbar = () => {
             </div>
           )}
           {isAuthenticated ? (
-            <div className="app__navbar-button flex justify-center">
+            <div className="flex justify-center app__navbar-button">
               <button
                 className="login"
                 onClick={() =>
@@ -178,7 +178,7 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="app__navbar-button flex flex-col my-3">
+            <div className="flex flex-col my-3 app__navbar-button">
               <button className="login" onClick={loginWithRedirect}>
                 Log In
               </button>

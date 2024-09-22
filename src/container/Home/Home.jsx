@@ -16,11 +16,11 @@ const Home = () => {
       
       <div className="app__home-content">
         <h1>DELIVERING INDIAN AUTHENTICITY WITH BLOCKCHAIN TRANSPARENCY</h1>
-        <p className="p__font1">A community of Indian Diaspora for meeting their needs of Traditional/Ethnic/Handicrafts through India Post</p>
+        <p className="p__font1">A community of Global Customers for meeting their needs of Traditional/Ethnic/Handicrafts through India Post</p>
         <button className="button_1">Explore Now</button>
         <div className="app__home-content_amount">
           <div>
-            <h1>219+</h1>
+            <h1>190+</h1>
             <p>Countries</p>
           </div>
           <div>

@@ -28,7 +28,7 @@ const CollectionFeatured = ({ featured: { imgUrl, imgUrl2, imgUrl3, imgUrl4, tit
 const Collection = () => {
   return (
     <div className='app__collections section__padding'>
-      <h1 className='h1__font2'>Collection Featured NFTs</h1>
+      <h1 className='text-2xl font-semibold'>Collection Featured NFTs</h1>
       <div className='app__collection-items'>
         <div className='app__collection-items_content'>
           {data.featureds.map((featured) => <CollectionFeatured featured={featured} key={featured.title} />)}
