@@ -38,6 +38,10 @@
     margin-top: 15px;
     justify-content: center;
     width: 100%;
+    transition: all ;
+}
+.app__discover-content:hover{
+
 }
 .app__discover_card {
     width: 100%;
